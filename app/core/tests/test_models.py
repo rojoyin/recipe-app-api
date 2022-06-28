@@ -38,7 +38,7 @@ class ModelTests(TestCase):
         with self.assertRaises(ValueError):
             email = ''
             password = "testpass123"
-            user = get_user_model().objects.create_user(
+            get_user_model().objects.create_user(
                 email=email, password=password
             )
 
