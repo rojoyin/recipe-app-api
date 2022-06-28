@@ -9,6 +9,7 @@ from django.contrib.auth.models import (
     PermissionsMixin,
 )
 
+
 class UserManager(BaseUserManager):
     """Manager for users."""
 
@@ -28,7 +29,6 @@ class UserManager(BaseUserManager):
         user.is_staff = True
         user.is_superuser = True
         return user
-
 
 
 class User(AbstractBaseUser, PermissionsMixin):
